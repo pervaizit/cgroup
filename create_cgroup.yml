@@ -1,0 +1,5 @@
+- hosts: localhost
+  become: true
+  tasks:
+    - name: Create cgroup
+      raw: cgcreate -a admin:admin -t admin:admin -g cpuacct,memory,pids:ex447_stats
